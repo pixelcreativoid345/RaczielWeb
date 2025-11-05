@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RACZIEL - Dedicación y Atención en Movimiento</title>
     <style>
-        /* Paleta de Colores y Variables */
+        /* Paleta de Colores y Variables (Sin cambios) */
         :root {
             --violeta-base: #5D3FD3; /* Base Fuerte */
             --verde-esmeralda: #4CAF50; /* Énfasis/Armonía */
@@ -24,12 +24,12 @@
             font-size: 1.05em;
         }
         
-        /* HEADER: Enmarcado con Violeta (Elegancia conceptual) */
+        /* HEADER: Enmarcado con Violeta */
         .header { 
             text-align: center; 
             padding: 80px 5%; 
             background-color: var(--blanco); 
-            border-bottom: 5px solid var(--violeta-base); /* Marco de color */
+            border-bottom: 5px solid var(--violeta-base); 
             color: var(--gris-oscuro); 
         }
         
@@ -39,7 +39,7 @@
             background-color: var(--amarillo-dorado); 
             color: var(--gris-oscuro); 
             text-decoration: none; font-weight: bold; font-size: 1.2em; 
-            border: 2px solid var(--amarillo-dorado); /* Borde claro para esquematizar */
+            border: 2px solid var(--amarillo-dorado); 
             border-radius: 4px; 
             letter-spacing: 0.8px;
             transition: all 0.4s ease;
@@ -57,23 +57,24 @@
 
         .section { padding: 90px 5%; max-width: 900px; margin: 0 auto; text-align: center; background-color: var(--blanco); }
         
-        /* Cajas Esquematicas (Feature Grid) */
+        /* Cajas Esquematicas */
         .feature-grid { display: flex; justify-content: space-between; gap: 40px; margin-top: 60px; }
         .feature-item { 
             flex: 1; padding: 30px; 
             background-color: var(--fondo-suave); 
-            border-left: 4px solid var(--verde-esmeralda); /* Marco de color lateral */
+            border-left: 4px solid var(--verde-esmeralda); 
             border-radius: 4px; 
             box-shadow: 0 2px 8px var(--sombra-delicada); 
             transition: transform 0.3s ease;
             text-align: left;
         }
         .feature-item:hover { transform: translateY(-5px); }
+        .feature-item h3 { color: var(--violeta-base); }
         
         /* Precios Esquematicos */
         .price-card { 
             padding: 30px; 
-            border: 1px solid #E0E0E0; /* Marco fino y sutil */
+            border: 1px solid #E0E0E0; 
             border-radius: 4px; 
             transition: box-shadow 0.3s;
             flex: 1; 
@@ -81,7 +82,7 @@
         }
         .price-card:hover { 
             box-shadow: 0 6px 15px var(--sombra-delicada); 
-            border-color: var(--violeta-base); /* El marco se intensifica */
+            border-color: var(--violeta-base); 
         }
         .price-card .price { font-size: 2.5em; color: var(--verde-esmeralda); font-weight: bold; margin: 15px 0;}
 
@@ -91,7 +92,7 @@
             color: var(--gris-oscuro); 
             padding: 80px 5%; 
             text-align: center; 
-            border-top: 3px solid var(--amarillo-dorado); /* Marco de color */
+            border-top: 3px solid var(--amarillo-dorado); 
         }
         .nicho-card {
             border: 1px solid #E0E0E0;
@@ -113,35 +114,37 @@
     </div>
 
     <div class="section">
-        <h2>🧘 El Método <strong>Escaneo de Armonía</strong></h2>
-        <p>Olvídate de diagnósticos superficiales. Nuestro <strong>escaneo profesional</strong> se enfoca en tu ritmo natural y potencial. Identificamos la ruta ideal para tu <strong>Crecimiento Trascendental</strong>.</p>
+        <h2 style="border-bottom-color: var(--verde-esmeralda);">🧘 El Método **Diagnóstico de Desafíos y Fluidez**</h2>
+        
+        <p>Olvídate de diagnósticos superficiales. Nuestro <strong>enfoque profesional</strong> se centra en tu ritmo natural y potencial, no en tus límites.</p>
+        <p>Identificamos la ruta ideal para tu <strong>Crecimiento Trascendental</strong>.</p>
         
         <div class="feature-grid">
             <div class="feature-item">
-                <h3 style="color: var(--violeta-base);">1. <strong>Trabajo</strong> Consciente</h3>
+                <h3>1. <strong>Trabajo</strong> Consciente</h3>
                 <p>Análisis de tu estado actual. Delicadeza en la evaluación, <strong>fortaleza</strong> en la dirección.</p>
             </div>
             <div class="feature-item">
-                <h3 style="color: var(--violeta-base);">2. <strong>Armonía</strong> Personalizada</h3>
+                <h3>2. <strong>Armonía</strong> Personalizada</h3>
                 <p>Sesiones de ejercicios diferenciados (Pilates Reflexivo o Coreográfico) para tu cuerpo y mente.</p>
             </div>
             <div class="feature-item">
-                <h3 style="color: var(--violeta-base);">3. <strong>Fluidez</strong> y Expresión</h3>
-                <p>Transforma el autoconocimiento en la <strong>liberación</strong> y <strong>fortaleza</strong> de tus movimientos. Una expresión más suave y auténtica.</p>
+                <h3>3. <strong>Fluidez</strong> y Expresión</h3>
+                <p>Transforma el autoconocimiento en la **liberación** y <strong>fortaleza</strong> de tus movimientos. Una expresión más suave y auténtica.</p>
             </div>
         </div>
     </div>
 
     <div class="section" style="padding-top: 50px;">
         <h2>💸 Invierte en tu <strong>Dedicación</strong> y <strong>Atención</strong></h2>
-        <p>Atención individualizada de 2 horas. El precio es por sesión, el <strong>valor</strong> es constante.</p>
+        <p>Atención individualizada de 2 horas. El precio cubre la sesión completa, y **el valor de tu transformación se mantiene a largo plazo**.</p>
         
         <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin: 40px 0;">
             
             <div class="price-card">
                 <h3 style="color: var(--violeta-base);">Sesión Individual Virtual</h3>
                 <p class="price">20 €</p>
-                <p>La opción más accesible para recibir tu <strong>Escaneo de Armonía</strong> desde casa.</p>
+                <p>La opción más accesible para recibir tu <strong>Diagnóstico de Desafíos y Fluidez</strong> desde casa.</p>
             </div>
             
             <div class="price-card">
@@ -167,7 +170,7 @@
             </div>
             <div class="nicho-card">
                 <h3 style="color: var(--violeta-base);">Para Artistas</h3>
-                <p>Libera tu Arte: Rompe los bloqueos creativos. Te preparamos para que tu <strong>expresión sea libre y trascendental</strong>. La suavidad de la expresión, la <strong>fortaleza</strong> del mensaje.</p>
+                <p>Libera tu Arte: Rompe los bloques creativos. Te preparamos para que tu <strong>expresión sea libre y trascendental</strong>. La suavidad de la expresión, la <strong>fortaleza</strong> del mensaje.</p>
             </div>
         </div>
     </div>
