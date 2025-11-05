@@ -65,8 +65,10 @@
             border-left: 4px solid var(--verde-esmeralda); /* Marco de color lateral */
             border-radius: 4px; 
             box-shadow: 0 2px 8px var(--sombra-delicada); 
+            transition: transform 0.3s ease;
             text-align: left;
         }
+        .feature-item:hover { transform: translateY(-5px); }
         
         /* Precios Esquematicos */
         .price-card { 
@@ -117,7 +119,7 @@
         <div class="feature-grid">
             <div class="feature-item">
                 <h3 style="color: var(--violeta-base);">1. **Trabajo** Consciente</h3>
-                <p>Análisis de tu estado actual. Delicadeza en la evaluación, **fortaleza** en la dirección.</p>
+                <p>Análisis de tu estado actual. Delicadeza en la evaluación, <strong>fortaleza</strong> en la dirección.</p>
             </div>
             <div class="feature-item">
                 <h3 style="color: var(--violeta-base);">2. **Armonía** Personalizada</h3>
