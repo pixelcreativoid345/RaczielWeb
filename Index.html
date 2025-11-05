@@ -3,125 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[NOMBRE DEL EMPRENDIMIENTO] - Un Espacio para Ser Libre</title>
+    <title>RACZIEL - Dedicación y Atención en Movimiento</title>
     <style>
-        /* Paleta de Colores con tonos más suaves y armónicos */
+        /* Paleta de Colores Ajustada para Mejor Contraste y Mimesis */
         :root {
-            --violeta: #6A3AB7; /* Profundo, pero no oscuro */
-            --verde-esmeralda: #4CAF50; /* Vivo, pero suave */
-            --amarillo-dorado: #FFD700; /* Punto de energía */
-            --gris-oscuro: #333333; /* En lugar de negro puro */
+            --violeta-base: #5D3FD3; /* Base Fuerte */
+            --violeta-suave: #6A3AB7; /* Para degradados */
+            --verde-esmeralda: #4CAF50; /* Para resaltados de valor */
+            --amarillo-dorado: #FFD700; /* Para CTA */
+            --gris-oscuro: #333333; /* Texto principal */
             --blanco: #FFFFFF;
-            --fondo-suave: #F8F8F8; /* Un blanco roto para más calidez */
-            --sombra-delicada: rgba(0, 0, 0, 0.08); /* Sombra ligera para elevación */
+            --fondo-suave: #FBFBFB; /* Blanco muy sutil, clave para la transición */
+            --sombra-delicada: rgba(0, 0, 0, 0.05); /* Muy ligera */
         }
         body { 
-            font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; /* Fuente más suave */
+            font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; 
             margin: 0; 
-            background-color: var(--fondo-suave); 
+            background-color: var(--fondo-suave); /* Fondo base suave */
             color: var(--gris-oscuro); 
-            line-height: 1.7; /* Mayor interlineado para delicadeza */
+            line-height: 1.7; 
             font-size: 1.05em;
         }
+        
+        /* HEADER: Degradado suave y contraste alto para texto */
         .header { 
             text-align: center; 
             padding: 80px 5%; 
-            background: linear-gradient(135deg, var(--violeta) 0%, rgba(106,58,183,0.8) 100%); /* Degradado para suavidad */
+            /* Mimesis y Transición: Degradado de Violeta a un tono más claro */
+            background: linear-gradient(160deg, var(--violeta-base) 0%, var(--violeta-suave) 100%); 
             color: var(--blanco); 
-            position: relative;
-            overflow: hidden; /* Para elementos de fondo sutiles */
         }
-        .header::before { /* Capa sutil de transparencia */
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(var(--verde-esmeralda), 0.1); /* Overlay de color */
-            z-index: 0;
-        }
-        .header > * { position: relative; z-index: 1; } /* Asegura que el contenido esté sobre el overlay */
-
-        .section { padding: 100px 5%; max-width: 900px; margin: 0 auto; text-align: center; }
-        .section.dark { background-color: var(--fondo-suave); } /* Usar el tono suave para las secciones alternas */
         
-        /* Estilo Suave y Elegante para botones */
+        /* Botones: Diseño Deportivo, Elegante y Legible */
         .cta-button { 
             display: inline-block; padding: 18px 45px; margin-top: 50px; 
             background-color: var(--amarillo-dorado); 
-            color: var(--gris-oscuro); /* Texto en color oscuro para contraste suave */
+            color: var(--gris-oscuro); 
             text-decoration: none; font-weight: bold; font-size: 1.2em; 
-            border: none; border-radius: 50px; /* Bordes más suaves, ovalados */
+            border: none; border-radius: 50px; 
             letter-spacing: 0.8px;
             transition: all 0.4s ease;
-            box-shadow: 0 6px 15px var(--sombra-delicada); /* Sombra más pronunciada pero suave */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1); 
         }
         .cta-button:hover { 
             background-color: var(--verde-esmeralda); 
             color: var(--blanco); 
-            box-shadow: 0 8px 20px rgba(var(--verde-esmeralda), 0.3); /* Sombra con el color de hover */
-            transform: translateY(-3px); /* Efecto sutil de elevación */
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4); 
+            transform: translateY(-3px); 
         }
 
         h1 { font-size: 3.8em; margin-bottom: 0.2em; font-weight: 700; }
-        h2 { font-size: 2.2em; margin-top: 0; color: var(--violeta); font-weight: 600; }
+        h2 { font-size: 2.2em; margin-top: 0; color: var(--violeta-base); font-weight: 600; }
         h3 { color: var(--gris-oscuro); font-size: 1.4em; margin-top: 0; font-weight: 600; }
 
+        .section { padding: 100px 5%; max-width: 900px; margin: 0 auto; text-align: center; }
+        .section.dark { background-color: var(--fondo-suave); } 
+        
+        /* Elementos: Más delicados con sombras sutiles */
         .feature-grid { display: flex; justify-content: space-between; gap: 40px; margin-top: 60px; }
         .feature-item { 
             flex: 1; padding: 30px; 
             background-color: var(--blanco); 
             border-radius: 10px; 
-            box-shadow: 0 4px 15px var(--sombra-delicada); /* Sombra delicada */
+            box-shadow: 0 4px 15px var(--sombra-delicada); 
             transition: transform 0.3s ease;
         }
-        .feature-item:hover { transform: translateY(-5px); } /* Sutil elevación */
-
-        .price-card { 
-            background-color: var(--blanco); padding: 40px; 
-            border-radius: 10px; 
-            box-shadow: 0 8px 25px var(--sombra-delicada); /* Sombra más profunda */
-            transition: box-shadow 0.4s ease, transform 0.4s ease;
-            flex: 1; /* Para que ocupen espacio similar */
-            min-width: 280px; /* Asegura un tamaño mínimo */
-        }
-        .price-card:hover { 
-            box-shadow: 0 12px 30px rgba(0,0,0,0.12); 
-            transform: translateY(-8px); /* Mayor elevación */
-        }
-        .price-card p { margin-bottom: 1em; }
-        .price-card strong { color: var(--violeta); }
-
-        .nicho-section { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 50px; }
-        .nicho-card { 
-            flex: 1; min-width: 300px; max-width: 450px; 
-            text-align: left; padding: 30px; 
-            background-color: var(--blanco); 
-            border-radius: 10px; 
-            box-shadow: 0 4px 15px var(--sombra-delicada);
-        }
+        
+        /* Footer con mimesis de degradado */
         .footer-section { 
-            background: linear-gradient(45deg, var(--violeta) 0%, rgba(106,58,183,0.8) 100%);
+            background: linear-gradient(160deg, var(--violeta-base) 0%, var(--violeta-suave) 100%);
             color: var(--blanco); 
             padding: 80px 5%; 
             text-align: center; 
-            position: relative;
         }
-         .footer-section::before { /* Capa sutil de transparencia */
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(var(--verde-esmeralda), 0.1); /* Overlay de color */
-            z-index: 0;
-        }
-        .footer-section > * { position: relative; z-index: 1; }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>
-            No Solo Muevas tu Cuerpo,<br> <span style="color: var(--amarillo-dorado);">Expresa tu Propósito.</span>
+        <h1 style="color: var(--blanco);">
+            **RACZIEL**<br> No Solo Muevas tu Cuerpo, <span style="color: var(--amarillo-dorado);">Expresa tu Propósito.</span>
         </h1>
-        <h2 style="font-size: 1.6em; font-weight: 300; color: var(--verde-esmeralda); margin-top: 20px;">Un espacio para ser libre. Llevamos tu rendimiento a la **Armonía** más profunda.</h2>
+        <h2 style="font-size: 1.6em; font-weight: 300; color: var(--blanco); margin-top: 20px;">Dedicación y Atención en Movimiento. Un espacio para ser libre.</h2>
     </div>
 
     <div class="section">
@@ -131,11 +94,11 @@
         <div class="feature-grid">
             <div class="feature-item">
                 <h3 style="color: var(--verde-esmeralda);">1. **Trabajo** Consciente</h3>
-                <p>Análisis de tu estado actual para un programa hecho a tu medida. Delicadeza en la evaluación, **fortaleza** en la dirección.</p>
+                <p>Análisis de tu estado actual. Delicadeza en la evaluación, **fortaleza** en la dirección.</p>
             </div>
             <div class="feature-item">
                 <h3 style="color: var(--verde-esmeralda);">2. **Armonía** Personalizada</h3>
-                <p>Sesiones de ejercicios diferenciados (Pilates Reflexivo o Plantillas Coreográficas) para tu cuerpo y mente.</p>
+                <p>Sesiones de ejercicios diferenciados (Pilates Reflexivo o Coreográfico) para tu cuerpo y mente.</p>
             </div>
             <div class="feature-item">
                 <h3 style="color: var(--verde-esmeralda);">3. **Fluidez** y Expresión</h3>
@@ -145,25 +108,24 @@
     </div>
 
     <div class="section dark">
-        <h2>💸 Invierte en tu **Trabajo** Consciente</h2>
-        <p>Atención individualizada de 2 horas. El precio es por sesión, el **valor** es constante. Suavidad en el proceso, **fortaleza** en el resultado.</p>
+        <h2>💸 Invierte en tu **Dedicación** y **Atención**</h2>
+        <p>Atención individualizada de 2 horas. El precio es por sesión, el **valor** es constante.</p>
         
         <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin: 60px 0;">
-            
-            <div class="price-card">
-                <h3 style="color: var(--violeta);">Sesión Individual Virtual</h3>
+            <div class="price-card" style="box-shadow: 0 4px 15px var(--sombra-delicada);">
+                <h3 style="color: var(--violeta-base);">Sesión Individual Virtual</h3>
                 <p style="font-size: 2.8em; color: var(--verde-esmeralda); font-weight: bold; margin: 15px 0;">20 €</p>
-                <p>La opción más accesible para recibir tu **Escaneo de Armonía** desde la comodidad de tu hogar.</p>
+                <p>La opción más accesible para recibir tu **Escaneo de Armonía** desde casa.</p>
             </div>
             
-            <div class="price-card">
-                <h3 style="color: var(--violeta);">Sesión Individual Presencial</h3>
+            <div class="price-card" style="box-shadow: 0 4px 15px var(--sombra-delicada);">
+                <h3 style="color: var(--violeta-base);">Sesión Individual Presencial</h3>
                 <p style="font-size: 2.8em; color: var(--verde-esmeralda); font-weight: bold; margin: 15px 0;">25 €</p>
-                <p>Experiencia completa y en persona con atención totalmente **personalizada** y delicada.</p>
+                <p>Experiencia completa con atención totalmente **personalizada** y delicada.</p>
             </div>
         </div>
 
-        <p style="color: var(--gris-oscuro); font-weight: 600;">[RECURRENCIA]: ¡Consulta por los paquetes de 4 y 8 sesiones! Mayor **Armonía** a un menor coste por hora. Una inversión suave pero **fortalecedora**.</p>
+        <p style="color: var(--gris-oscuro); font-weight: 600;">[RECURRENCIA]: ¡Consulta por los paquetes de 4 y 8 sesiones! Mayor **Armonía** a un menor coste por hora.</p>
         
         <a href="https://linktr.ee/SamanthaRacziel" target="_blank" class="cta-button">
             RESERVA TU SESIÓN HOY AQUÍ
@@ -172,24 +134,24 @@
 
     <div class="section">
         <h2>🌟 La **Fluidez** de tu Propósito</h2>
-        <div class="nicho-section">
-            <div class="nicho-card">
-                <h3 style="color: var(--violeta);">Para Amantes del Deporte</h3>
-                <p>Despierta la Fuerza Interior: Te ayudamos a integrar la reflexión en tu rutina para transformar el esfuerzo en **Armonía**, logrando ese **estado de Flow** en cada movimiento. Tu cuerpo como herramienta de alto rendimiento y **conciencia plena**. Delicadeza en la preparación, **fortaleza** en la ejecución.</p>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 50px;">
+            <div class="nicho-card" style="box-shadow: 0 4px 15px var(--sombra-delicada);">
+                <h3 style="color: var(--violeta-base);">Para Amantes del Deporte</h3>
+                <p>Despierta la Fuerza Interior: Logra el **estado de Flow** en cada movimiento. Tu cuerpo como herramienta de alto rendimiento y **conciencia plena**. **Dedicación** en la preparación, **fortaleza** en la ejecución.</p>
             </div>
-            <div class="nicho-card">
-                <h3 style="color: var(--violeta);">Para Artistas</h3>
-                <p>Libera tu Arte: Rompe los bloqueos creativos y canaliza tu energía. Nuestras sesiones te preparan para que tu **expresión sea libre y trascendental**, en sintonía con tu ritmo natural y tu **trabajo** creativo. La suavidad de la expresión, la **fortaleza** del mensaje.</p>
+            <div class="nicho-card" style="box-shadow: 0 4px 15px var(--sombra-delicada);">
+                <h3 style="color: var(--violeta-base);">Para Artistas</h3>
+                <p>Libera tu Arte: Rompe los bloqueos creativos. Te preparamos para que tu **expresión sea libre y trascendental**. La suavidad de la expresión, la **fortaleza** del mensaje.</p>
             </div>
         </div>
     </div>
 
     <div class="footer-section">
         <h2 style="color: var(--amarillo-dorado);">🎁 MEGA SORTEO RACZIEL</h2>
-        <p>Participa en nuestro sorteo mensual para ganar descuentos del **25%, 50% y 100%** en tus sesiones. Una comunidad que crece con **Armonía** y **Fortaleza**.</p>
+        <p>Participa en nuestro sorteo mensual para ganar descuentos del **25%, 50% y 100%** en tus sesiones. Una comunidad que crece con **Armonía** y **Dedicación**.</p>
         
         <h3 style="margin-top: 50px; color: var(--verde-esmeralda); font-size: 1.6em;">Merch: El Manifiesto que Vistes (Próximamente)</h3>
-        <p>Nuestra ropa y materiales son recordatorios de tu **Armonía** y **Fluidez**. Cada pieza incluirá una **Hoja de Ruta** de reflexión para que lleves la conciencia a donde vayas. **Delicadeza** en el diseño, **fortaleza** en el mensaje.</p>
+        <p>Nuestra ropa y materiales son recordatorios de tu **Armonía** y **Fluidez**. Cada pieza incluirá una **Hoja de Ruta** de reflexión para que lleves la conciencia a donde vayas.</p>
     </div>
 
 </body>
